@@ -1,12 +1,63 @@
 import streamlit as st
 from openai import OpenAI
 
+st.markdown("""
+    <style>
+    .main {
+        background-color: #ff5400;
+        color: #ffffff;
+        text-align: center;
+        padding: 0rem 0rem 0rem;
+        margin-top: 5px;
+    }
+    .main h1 {
+        font-size: 4em;
+        padding: 0rem 0px 0rem;
+    }
+    .main h2 {
+        font-size: 3.75em;
+        color: #002430; 
+        padding: 0rem 0px 0rem;
+        margin-bottom: 15px;
+    }
+    .main p {
+        font-size: 1em;
+    }
+    .main .button {
+        background-color: #002430;
+        border: none;
+        color: white;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1em;
+        margin-top: 20px;
+        cursor: pointer;
+        border-radius: 50px;
+    }
+    .st-emotion-cache-13ln4jf {
+    width: 100%;
+    padding: 3rem 1rem 10rem;
+    max-width: 46rem;
+}
+    
+    </style>
+    """, unsafe_allow_html=True)
+
+# HTML content
+st.markdown("""
+    <div class="main">
+        <h1>KNOW YOURSELF</h1>
+        <h2>personify yourself</h2>
+        <p>A place to know who you are, what you can become and what you can achieve.</p>
+       
+    </div>
+
 # Show title and description.
-st.title("💬 Chatbot")
+st.title("Jarvis - OO1")
 st.write(
-    "This is a simple chatbot that uses OpenAI's GPT-3.5 model to generate responses. "
-    "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
-    "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
+    "Hi I am Jarvis, your AI assistant. You can ask me anything.Just Enter your OpenAI API key (my open sesame) to initiate a converstion with me!"
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
@@ -32,7 +83,7 @@ else:
 
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
-    if prompt := st.chat_input("What is up?"):
+    if prompt := st.chat_input("How can I help you today?"):
 
         # Store and display the current prompt.
         st.session_state.messages.append({"role": "user", "content": prompt})
