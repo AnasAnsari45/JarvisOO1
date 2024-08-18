@@ -1,65 +1,61 @@
 import streamlit as st
 from openai import OpenAI
 
+st.set_page_config()
+
 st.markdown("""
     <style>
     .main {
-        background-color: #ff5400;
+        #background-color: #000066;
         color: #ffffff;
-        text-align: center;
+        # text-align: center;
         padding: 0rem 0rem 0rem;
         margin-top: 5px;
     }
     .main h1 {
+        text-align: center;
         font-size: 4em;
         padding: 0rem 0px 0rem;
     }
     .main h2 {
-        font-size: 3.75em;
-        color: #002430; 
+        font-size: 1.75em;
+        text-align: center;
+        color: #33cccc; 
         padding: 0rem 0px 0rem;
         margin-bottom: 15px;
     }
-    .main p {
+    .center {
         font-size: 1em;
-    }
-    .main .button {
-        background-color: #002430;
-        border: none;
-        color: white;
-        padding: 10px 32px;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1em;
-        margin-top: 20px;
-        cursor: pointer;
-        border-radius: 50px;
     }
-    .st-emotion-cache-13ln4jf {
-    width: 100%;
-    padding: 3rem 1rem 10rem;
-    max-width: 46rem;
-}
-    
     </style>
     """, unsafe_allow_html=True)
+
+def make_chattext_dark():
+    return """
+        <style>
+        [data-testid="stChatInput"] {
+        color: #003366;
+        caret-color: #003366;
+        }
+        </style>"""
 
 # HTML content
 st.markdown("""
     <div class="main">
-        <h1>KNOW YOURSELF</h1>
-        <h2>personify yourself</h2>
-        <p>A place to know who you are, what you can become and what you can achieve.</p>
+        <h1>JARVIS</h1>
+        <h2>V - OO1</h2>
+        <p class="center">Hi I am Jarvis, your AI assistant! You can ask me anything.</p>
+        <p class="center">Just Enter your OpenAI API key (my open sesame) to initiate a converstion with me!</p>
        
     </div>
 """, unsafe_allow_html=True)
 
 # Show title and description.
-st.title("Jarvis - OO1")
-st.write(
-    "Hi I am Jarvis, your AI assistant. You can ask me anything.Just Enter your OpenAI API key (my open sesame) to initiate a converstion with me!"
-)
+# st.title("Jarvis - OO1")
+# st.write(
+#     "Hi I am Jarvis, your AI assistant. You can ask me anything.Just Enter your OpenAI API key (my open sesame) to initiate a converstion with me!"
+# )
 
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
