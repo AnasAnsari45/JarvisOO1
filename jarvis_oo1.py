@@ -4,7 +4,7 @@ from openai import OpenAI
 st.markdown("""
     <style>
     .main {
-        background-color: #2596be;
+        #background-color: #2596be;
         color: #fffff;
         # text-align: center;
         padding: 0rem 0rem 0rem;
