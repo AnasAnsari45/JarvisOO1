@@ -1,13 +1,11 @@
 import streamlit as st
 from openai import OpenAI
 
-st.set_page_config()
-
 st.markdown("""
     <style>
     .main {
-        #background-color: #000066;
-        color: #ffffff;
+        background-color: #2596be;
+        color: #fffff;
         # text-align: center;
         padding: 0rem 0rem 0rem;
         margin-top: 5px;
@@ -20,7 +18,7 @@ st.markdown("""
     .main h2 {
         font-size: 1.75em;
         text-align: center;
-        color: #33cccc; 
+        color: #000066; 
         padding: 0rem 0px 0rem;
         margin-bottom: 15px;
     }
@@ -31,25 +29,17 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-def make_chattext_dark():
-    return """
-        <style>
-        [data-testid="stChatInput"] {
-        color: #003366;
-        caret-color: #003366;
-        }
-        </style>"""
-
 # HTML content
 st.markdown("""
     <div class="main">
         <h1>JARVIS</h1>
         <h2>V - OO1</h2>
-        <p class="center">Hi I am Jarvis, your AI assistant! You can ask me anything.</p>
-        <p class="center">Just Enter your OpenAI API key (my open sesame) to initiate a converstion with me!</p>
+        <p class="center">Hi I am Jarvis, your AI assistant! You can ask me anything. Enter your OpenAI API key to initiate a converstion with me!</p>
        
     </div>
 """, unsafe_allow_html=True)
+
+
 
 # Show title and description.
 # st.title("Jarvis - OO1")
