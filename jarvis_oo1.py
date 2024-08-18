@@ -18,7 +18,7 @@ st.markdown("""
     .main h2 {
         font-size: 1.75em;
         text-align: center;
-        color: #000066; 
+        #color: #000066; 
         padding: 0rem 0px 0rem;
         margin-bottom: 15px;
     }
